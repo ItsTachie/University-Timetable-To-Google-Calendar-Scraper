@@ -6,7 +6,7 @@ from datetime import datetime
 def get_output_filename(config_file):
     with open(config_file, 'r') as f:
         config = json.load(f)
-    return config.get("output", "default_output.ics")  # Default filename if key is not found
+    return config.get("ics_output", "default_output.ics")  # Default filename if key is not found
 
 # Function to convert CSV event to ICS format
 def csv_to_ics(csv_file, ics_file):
